@@ -1,0 +1,36 @@
+<div id="newtext" style="position:absolute; top:100px;">
+    <p>this is Text</p>
+</div>
+<form>
+    <input type="button" name="moveLayer" value="move Left" onclick="move('left');">
+    <input type="button" name="moveLayer" value="move Right" onclick="move('right');">
+    <input type="button" name="moveLayer" value="move Up" onclick="move('up'); ">
+    <input type="button" name="moveLayer" value="move Down" onclick="move('down'); ">
+</form>
+
+<script>
+var greg=10;
+function move(direction) {
+    var layerText = document.getElementById("newtext");
+
+    switch (direction) {
+
+        case "left":
+            layerText.style.left = "50px";
+            break;
+
+        case "right":
+            greg=greg+10;
+            layerText.style.left = greg;
+            break;
+
+        case "up":
+            layerText.style.top = "50px";
+            break;
+        case "down":
+            layerText.style.top = "150px";
+            break;
+    }
+}
+
+</script>
