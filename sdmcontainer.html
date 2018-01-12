@@ -48,12 +48,38 @@
 <div class="container">
   <img src="2row.png" alt="Norway" style="width:100%;">
   <div class="bottom-left">Bottom Left</div>
-  <div class="top-left">Top Left</div>
+  <div class="top-left">Top Left
+<p id="demo"></p>
+</div>
+
   <div class="top-right">Top Right</div>
+
   <div class="bottom-right">Bottom Right</div>
   <div class="centered">Centered</div>
 </div>
+<div id="newtext" style="position:absolute; top:300px;">
+    <p>this is Text</p>
+<p id="demo"></p>
 
+</div>
+
+
+
+
+<input type="text" id="myText" value="Some text...">
+
+<button onclick="myFunction()">Try it</button>
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
+
+//    document.getElementById("newtext").innerHTML=x;;
+}
+</script>
 </body>
 </html> 
 
