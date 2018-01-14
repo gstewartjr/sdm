@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans">      
+    <style> 
+      body { 
+        font-family: 'Droid+Sans', serif; 
+      } 
+    </style>
+
 <style>
 .container {
     position: relative;
-    text-align: center;
+    text-align: left;
+    background:Grey;
+    height:100px;
+    width:500px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    background:Green;
+    font-size:200%;
+    line-height:60%;
+    font-family: 'Droid+Sans', serif; 
+}
+
+.cpic {
+    position: relative;
+    text-align: left;
     color: red;
+    background:blue;
+    width:500px;
 }
 
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-}
-
-.top-left {
-    position: absolute;
-    top: -16px;
-    left: 0px;
-}
-
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 </style>
 </head>
 <body>
 
-<h2>Image Text</h2>
-<p>How to place text over an image:</p>
 
 <div class="container">
-  <img src="2row.png" alt="Norway" style="width:100%;">
-  <div class="bottom-left">Bottom Left</div>
-  <div class="top-left">Top Left
-<p id="demo"></p>
+  <div class="bottom"><b id="demo"></b></div>
+</div>
+<div class="cpic">
+ <img src="2row.png" alt="Norway" style="width:100%;">
 </div>
 
-  <div class="top-right">Top Right</div>
-
-  <div class="bottom-right">Bottom Right</div>
-  <div class="centered">Centered</div>
-</div>
-<div id="newtext" style="position:absolute; top:300px;">
-    <p>this is Text</p>
-<p id="demo"></p>
-
-</div>
-
-
-
-
-<input type="text" id="myText" value="Some text...">
-
+<input type="text" id="myText" value="SAN DIEGO MAKE">
 <button onclick="myFunction()">Try it</button>
+</br>
 
-
+  <input type="radio" name="font" onclick="handleRadio('red')" value="font1"> FONT1<br>
+  <input type="radio" name="font" onclick="handleRadio('blue')" value="font2"> FONT2<br>
 
 <script>
+myFunction();
 function myFunction() {
     var x = document.getElementById("myText").value;
     document.getElementById("demo").innerHTML = x;
 
 //    document.getElementById("newtext").innerHTML=x;;
+//  <div class="bottom"><p id="demo"></p></div>
+ // href="https://fonts.googleapis.com/css?family=Tangerine"> 
+}
+
+function handleRadio(font)
+{
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML=x;;
+   
+    document.getElementById("demo").style.color=font;
+
+    document.getElementById("demo").style.fontFamily="Impact,Charcoal,sans-serif";
+
 }
 </script>
 </body>
